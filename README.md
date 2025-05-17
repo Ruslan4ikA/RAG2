@@ -5,8 +5,6 @@
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-![Бот в работе](https://example.com/path/to/screenshot.png) <!-- Замените на реальный URL скриншота -->
-
 ## 🔍 Описание
 
 Система позволяет сотрудникам получать точные ответы на вопросы, основанные на корпоративных документах (DOCX). Использует:
