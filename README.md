@@ -33,7 +33,7 @@ cd RAG2
 pip install -r requirements.txt
 ```
 
-3. Поместите документы в папку `documents/`
+3. В файле `config.py` укажите папку для документов в переменной `DOCUMENTS_DIR`
 
 4. Запустите обработку:
 ```bash
@@ -44,10 +44,9 @@ python embedding_generator.py
 ## 🚀 Запуск бота
 
 1. Создайте бота через [@BotFather](https://t.me/BotFather)
-2. Укажите токен в `config.py` или через переменные окружения
-3. Запустите бота:
+2. Запустите бота:
 ```bash
-python telegram_bot.py
+python telegram_bot.py YOUR_TELEGRAM_BOT_TOKEN
 ```
 
 ## 🗂 Структура проекта
@@ -88,4 +87,4 @@ RAG2/
 
 ---
 
-> 📧 **Контакты**: Ваше Имя · [@unbefangenheit](https://t.me/unbefangenheit) · ruslanr26@mail.ru
+> 📧 **Контакты**: Абзелилов Руслан · [@unbefangenheit](https://t.me/unbefangenheit) · ruslanr26@mail.ru
