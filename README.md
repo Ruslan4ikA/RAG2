@@ -81,10 +81,6 @@ RAG2/
 4. Запушьте (`git push origin feature/AmazingFeature`)
 5. Откройте Pull Request
 
-## 📜 Лицензия
-
-Распространяется под лицензией MIT. См. файл [LICENSE](LICENSE).
-
 ---
 
 > 📧 **Контакты**: Абзелилов Руслан · [@unbefangenheit](https://t.me/unbefangenheit) · ruslanr26@mail.ru
