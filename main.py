@@ -15,3 +15,10 @@ if __name__ == '__main__':
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
+import requests
+
+response = requests.post("http://localhost:5000/rag", json={
+    "query": "Как оформить возврат средств?",
+    "context_type": "support"
+})
+print(response.json())
