@@ -13,12 +13,8 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    from rag_system import RAGSystem
 
-import requests
-
-response = requests.post("http://localhost:5000/rag", json={
-    "query": "Как оформить возврат средств?",
-    "context_type": "support"
-})
-print(response.json())
+    rag = RAGSystem()
+    response = rag.generate_response("Кому подчиняется руководитель отдела?")
+    print(response)

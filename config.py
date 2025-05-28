@@ -1,3 +1,5 @@
+import os
+import torch
 # Пути
 DOCUMENTS_DIR = r"C:\Users\Mi\OneDrive\Рабочий стол\PARIS\факт\БЗ\Инструкции"
 DB_DIR = "db/"
@@ -9,9 +11,9 @@ OVERLAP = 50  # Перекрытие между чанками
 
 # Настройки модели
 MODEL_KWARGS = {
-    "n_ctx": 2048,
-    "n_threads": 4,  # Количество потоков CPU
-    "n_gpu_layers": 0  # Для CPU-режима
+    "n_ctx": 4096,  # Увеличить контекст
+    "n_threads": 8 if os.cpu_count() >= 8 else 4,  # Автовыбор потоков
+    "n_gpu_layers": 20 if torch.cuda.is_available() else 0  # Автодетект GPU
 }
 
 # Настройки эмбеддингов

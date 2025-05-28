@@ -4,3 +4,9 @@ chromadb>=0.4.15
 llama-cpp-python>=0.2.23
 python-telegram-bot>=22.1
 tqdm>=4.66.1
+sentence-transformers
+chromadb
+llama-cpp-python
+torch
+transformers
+cross-encoder
