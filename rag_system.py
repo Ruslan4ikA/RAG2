@@ -72,7 +72,7 @@ class RAGSystem:
                         'similarity': similarity,
                         'chunk_id': meta.get('chunk_id', '')
                     })
-
+            # logger.info(f'retrieve: {filtered}')
             # Сортировка по убыванию релевантности
             return sorted(filtered, key=lambda x: x['similarity'], reverse=True)[:top_k]
 
@@ -138,12 +138,12 @@ class RAGSystem:
 ОТВЕТ:"""
 
             logger.info("Генерация ответа...")
-            response = self.llm(prompt, max_tokens=512, temperature=0.1, stop=["\n"])
+            response = self.llm(prompt, max_tokens=512, temperature=0.1, stop=["\n", "Примечание.", "Примечание", "Примечания:", "Примечания."])
             answer = response['choices'][0]['text'].strip()
 
             # Проверяем, не возвращена ли заглушка
-            if not answer or "не могу найти" in answer.lower():
-                logger.warning("Модель не нашла информации в контексте")
+            if not answer:
+                logger.warning("Модель не нашла информации в контекстееееее")
                 return "Не могу найти информацию в базе знаний"
 
             return answer
